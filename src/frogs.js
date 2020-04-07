@@ -1,20 +1,20 @@
 
 
 
-var green = {
-    id : 1,
+const green = {
+    id: 1,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'src/assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
 
-var rightTree = {
-    id : 1,
+const rightTree = {
+    id: 2,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'src/assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
@@ -22,65 +22,65 @@ var rightTree = {
 
 
 
-var leftTree = {
-    id : 1,
+const leftTree = {
+    id: 3,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
 
-var salmon = {
-    id : 1,
+const salmon = {
+    id: 4,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: '/assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
-var red = {
-    id : 1,
+const red = {
+    id: 5,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
-var pink = {
-    id : 1,
+const pink = {
+    id: 6,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
-var orge = {
-    id : 1,
+const orge = {
+    id: 7,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
-var blue = {
-    id : 1,
+const blue = {
+    id: 8,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: '/assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
 };
 
 const black = {
-    id : 1,
+    id: 9,
     name: 'frank',
-    image: '../assets/frog.jpeg', // './src ',
+    image: 'assets/frog1.jpeg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: '$100,000'//dolers
@@ -88,13 +88,18 @@ const black = {
 
 
 const frogs = [
-    green, 
+    green,
     black,
     blue,
-    orge,
     pink,
+    orge,
+    rightTree,
     leftTree,
-    rightTree
+    salmon,
+    red
+
+
+
 ];
 
 

@@ -1,11 +1,16 @@
 header {
     display: flex;
-    align-items: inherit;
+    justify-content: space-evenly;
+    align-items: ;
+    background-color: greenyellow;
+    height: 90px;
 }
 
 header h1 {
     font-size: 1.5em;
-    border: 1px gray solid;
+    border: 3px grey solid;
+    text-align: center;
+    text-justify: auto;
 
 }
 
@@ -70,7 +75,8 @@ body h1{
 }
 
 li {
-    width: 450px;
+    width: auto;
+    padding-left: 10px;
 }
 div {
     display: flex;
@@ -90,37 +96,58 @@ div {
 
 img {
     border-radius: 20px;
+    border: 5px  rgba(250, 249, 249, 0.222) solid;
 }
 
-img:hover{
-    background-color: black;
-    border: darkgray 2px solid;
-  
-}
 article {
-    width: 400px;
-    height: 100px; 
+    width: 200px;
+    height: 90px; 
+    position: relative;
+    bottom: 45px;
+    left: 10px;
+    background-color: rgba(215, 215, 215, 0.79);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 article:hover{
+    border-radius: 20px;
     overflow: visible;
-    background-color: darkgreen;
+    background-color: rgba(215, 215, 215, 0.79);
+    width: 200px;
+    height: 210px; 
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+}
+
+
+
+P {
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    position: relative;
+    bottom: 10px;
+
+    overflow: scroll;   
+}
+
+p:hover {
+    width: inherit;
+    height: inherit;
+    padding: 5px;
+    position: relative;
+    top: 20px;
 }
 
 section{
     display: flex;
-    justify-items: baseline;
-}
-
-P {
-    background-color: rgba(215, 215, 215, 0.79);
-    border-radius: 20px;
-    border: 5px;
-    padding: 5px;
+    justify-items: stretch;
+    align-items: baseline;
     position: relative;
-    top: 145px;
-    right: 225px;
-  
+    bottom: 40px;
+    left: 10px;
 }
 
 h4{
@@ -131,5 +158,4 @@ h4{
 #button-buy {
     height: 20px;
     border-radius: 20px;
-    justify-self: right;
 }
