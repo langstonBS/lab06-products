@@ -1,19 +1,24 @@
 
 
 const cart = [{
-    id: '1',
+    name: 'flee',
+    id: 1,
     quantity: 2
 }, {
-    id: '3',
+    name: 'fly',
+    id: 3,
     quantity: 5
 }, {
-    id: '5',
+    name: 'flue',
+    id: 5,
     quantity: 1
 }, {
-    id: '6',
+    name: 'fell',
+    id: 6,
     quantity: 10
 }, {
-    id: '4',
+    name: 'fumble',
+    id: 4,
     quantity: 10
 }];
 
