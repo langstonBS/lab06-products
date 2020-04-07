@@ -1,0 +1,105 @@
+header {
+    display: flex;
+    align-items: inherit;
+}
+
+header h1 {
+    font-size: 1.5em;
+    border: 1px gray solid;
+
+}
+
+
+nav button {
+    text-align: center;
+    font-size: 1em;
+    padding: 5px 10px 5px 10px;
+    font-weight: bolder;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.4s;
+    background-color: green;
+    
+}
+nav button:hover {
+    background-color: red;
+    color: lightgreen;
+  }
+    
+ nav ul {
+    display: flex;
+    justify-content: inline;
+}
+
+nav li {
+    display: block;
+    width: 60px;
+    margin: 0px;
+}
+
+main li {
+    
+}
+
+main ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+
+}
+
+
+.box{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+
+}
+
+.box-content{
+    position: relative;
+    display: inline-block; /* Make the width of box same as image */
+    
+}
+
+body h1{
+    font-size: 2em;
+    background-color: rgba(250, 249, 249, 0.222);
+    border-radius: 2px;
+}
+
+div {
+    display: flex;
+    justify-items: baseline;
+}
+
+
+.box .text {
+    position: absolute;
+    z-index: 999;
+    margin: 0 10px;
+    left: 0;
+    right: 30px;
+    top: 0; /* Adjust this value to move the positioned div up and down */
+    text-align: right;
+    width: 10%; /* Set the width of the positioned div */
+    border-radius: 10px;
+}
+
+#product-discription {
+
+}
+
+section{
+    max-height: 20px;
+    display: flex;
+    justify-content: baseline;
+    align-items: row;
+    background-color: green;
+}
+#price {
+    float: left;
+}
+
+.button-buy {
+    float: right;
+}
