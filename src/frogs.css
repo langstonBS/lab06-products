@@ -39,10 +39,6 @@ nav li {
     margin: 0px;
 }
 
-* {
-    max-width: 900px;
-
-}
 main li {
     border-top-left-radius: 20px;
     display: flex;
@@ -55,7 +51,6 @@ main ul {
     display: flex;
     justify-content: right;
     list-style: none;
-    max-width: 600px;
     flex-wrap:wrap;
 }
 
@@ -113,6 +108,8 @@ article {
     background-color: rgba(215, 215, 215, 0.79);
     border-radius: 20px;
     overflow: hidden;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.4s;
 }
 
 article:hover{
@@ -134,6 +131,8 @@ P {
     padding: 10px;
     position: relative;
     bottom: 10px;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.1s;
 
     overflow: scroll;   
 }

@@ -10,4 +10,13 @@ export function findId(arryItem, id) {
             return item;
         }
     }
+    return null;
 }
+
+export function calcLineItem(price, amount){
+    let total = 0;
+    total = price * amount;
+    Math.round(total * 100) / 100;
+    return total;
+}
+
