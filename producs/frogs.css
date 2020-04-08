@@ -95,6 +95,8 @@ div {
 }
 
 img {
+    max-width: 400px;
+    max-height: 200px;
     border-radius: 20px;
     border: 5px  rgba(250, 249, 249, 0.222) solid;
 }

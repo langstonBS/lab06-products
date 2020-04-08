@@ -1,5 +1,5 @@
 
-import frogs from '/src/frogs.js';
+import frogs from './frogs.js';
 const list = document.getElementById('frogs');
 
 
@@ -42,7 +42,7 @@ function renderFrogs(frog){
     titleDiv.appendChild(h1);
 
 
-    img.src = 'assets/frog1.jpg';
+    img.src = frog.image;
     img.alt = frog.name + ' image';
     
     innerBox.appendChild(titleDiv);

@@ -1,38 +1,34 @@
 
 
-import cart from '/src/assets/checkout/cart.js';
-const list = document.getElementById('cart');
-
-cart.forEach(element => {
-    const el = renderTable(element);
-    list.appendChild(el);  
-});
+import cart from './cart.js';
 
 
-export function renderTable(cartElemnt){
 
-    //create elemets 
-    const tr = document.createElement('tr');
-    const thName = document.createElement('th');
-    const thAmout = document.createElement('th');
-    const thTotal = document.createElement('th');
-    const thCost = document.createElement('th');
-
-    thName.textContent = cartElemnt.name;
-    thTotal.textContent = cartElemnt.id;
-    thAmout.textContent = cartElemnt.quantity;
-    thCost.textContent = 5;
-
-    tr.appendChild(thName);
-    tr.appendChild(thTotal);
-    tr.appendChild(thAmout);
-    tr.appendChild(thCost);
-    
-    return tr;
+function createTableHead(table, data){
+    let tHead = table.createTHead();
+    let row = tHead.insertRow();
+    for (let key of data)
+    {
+        let thData = document.createElement('th');
+        let text = document.createTextNode(key);
+        thData.appendChild(text);
+        row.appendChild(thData);
+    }
 }
-//<tr>
-               // <th>'frog'</th>
-                //<th>1</th>
-                //<th>5</th>
-               // <th>5</th>
-               // </tr>
+
+function createTableRrow(table, data){
+    for (let element of data){
+        let row = table.insertRow();
+        for (let key in element){
+            let cell = row.insertCell();
+            let text = document.createTextNode(element[key]);
+            cell.appendChild(text);
+        
+        }
+    }
+}
+
+let theTable = document.querySelector('table');
+let data = Object.keys(cart[0]);
+createTableHead(theTable, data);
+createTableRrow(theTable, cart);

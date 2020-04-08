@@ -1,10 +1,9 @@
 
 
-
 const green = {
     id: 1,
     name: 'frank',
-    image: 'src/assets/frog1.jpeg', // './src ',
+    image: '/src/assets/frogBlue.jpg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: 243 //dolers
@@ -14,7 +13,7 @@ const green = {
 const rightTree = {
     id: 2,
     name: 'roboFrog',
-    image: 'src/assets/frog1.jpeg', // './src ',
+    image: '/src/assets/robo.jpg', // './src ',
     description:'IT a Robot frog',
     category: 'flying frgos', //old youg
     price: 324 //dolers
@@ -24,8 +23,8 @@ const rightTree = {
 
 const leftTree = {
     id: 3,
-    name: 'bigfrog',
-    image: 'assets/frog1.jpeg', // './src ',
+    name: 'dogFrog',
+    image: '/src/assets/dogFrog.jpg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: 135 //dolers
@@ -35,7 +34,7 @@ const leftTree = {
 const salmon = {
     id: 4,
     name: 'kermitfrog',
-    image: '/assets/frog1.jpeg', // './src ',
+    image: '/src/assets/kermit.jpg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: 400 //dolers
@@ -44,7 +43,7 @@ const salmon = {
 const red = {
     id: 5,
     name: 'lastfrog',
-    image: 'assets/frog1.jpeg', // './src ',
+    image: '/src/assets/robo.jpg', // './src ',
     description:'IT a frog',
     category: 'flying frgos', //old youg
     price: 250 //dolers
@@ -52,8 +51,8 @@ const red = {
 
 const pink = {
     id: 6,
-    name: 'aFrog',
-    image: 'assets/frog1.jpeg', // './src ',
+    name: 'deflat Frog',
+    image: '/src/assets/frog1.jpg', // './src ',
     description:'IT a big frog',
     category: 'flying frgos', //old youg
     price: 5 //dolers
@@ -61,8 +60,8 @@ const pink = {
 
 const orge = {
     id: 7,
-    name: 'theFrog',
-    image: 'assets/frog1.jpeg', // './src ',
+    name: 'big Frog',
+    image: '/src/assets/bigFrog.jpg', // './src ',
     description:'Is the frog when frog',
     category: 'flying frgos', //old youg
     price: 1 //dolers
@@ -71,7 +70,7 @@ const orge = {
 const blue = {
     id: 8,
     name: 'CatFrog',
-    image: '/assets/frog1.jpeg', // './src ',
+    image: '/src/assets/catFrog.jpg', // './src ',
     description:'idk what do you want to know',
     category: 'flying frgos', //old youg
     price: 300 //dolers
@@ -80,7 +79,7 @@ const blue = {
 const black = {
     id: 9,
     name: 'iknow nothing abuot them',
-    image: 'assets/frog1.jpeg', // './src ',
+    image: '/src/assets/frogPoisin.jpg', // './src ',
     description:'is it a dog or a frog who knows',
     category: 'flying frgos', //old youg
     price: 100 //dolers
@@ -95,11 +94,7 @@ const frogs = [
     orge,
     rightTree,
     leftTree,
-    salmon,
-    red
-
-
-
+    salmon
 ];
 
 
