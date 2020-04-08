@@ -13,10 +13,18 @@ export function findId(arryItem, id) {
     return null;
 }
 
+
+export function createDolareanout(price){
+    let dolerAmout = ' ';
+    Math.round(price * 100) / 100;
+    dolerAmout = `$ ${price}`;
+    return dolerAmout;
+}
+
 export function calcLineItem(price, amount){
     let total = 0;
     total = price * amount;
-    Math.round(total * 100) / 100;
-    return total;
+    let returnDolor = createDolareanout(total);
+    return returnDolor;
 }
 

@@ -1,26 +1,38 @@
 
 
-import cart from '../src/cartJava.js';
+import cart from '/src/assets/checkout/cart.js';
+const list = document.getElementById('cart');
 
-
-list.forEach(element => {
-    const el = cart(element);
+cart.forEach(element => {
+    const el = renderTable(element);
     list.appendChild(el);  
 });
 
 
-function renderTable(frog){
+export function renderTable(cartElemnt){
 
     //create elemets 
-    const li = document.createElement('li');
-    const h1 = document.createElement('h1');
-    const img = document.createElement('img');
-    const h4 = document.createElement('h4');
-    const button = document.createElement('button');
-    const p = document.createElement('p');
+    const tr = document.createElement('tr');
+    const thName = document.createElement('th');
+    const thAmout = document.createElement('th');
+    const thTotal = document.createElement('th');
+    const thCost = document.createElement('th');
 
+    thName.textContent = cartElemnt.name;
+    thTotal.textContent = cartElemnt.id;
+    thAmout.textContent = cartElemnt.quantity;
+    thCost.textContent = 5;
+
+    tr.appendChild(thName);
+    tr.appendChild(thTotal);
+    tr.appendChild(thAmout);
+    tr.appendChild(thCost);
     
-    //divs
-
-    return li;
+    return tr;
 }
+//<tr>
+               // <th>'frog'</th>
+                //<th>1</th>
+                //<th>5</th>
+               // <th>5</th>
+               // </tr>
