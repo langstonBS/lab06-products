@@ -1,5 +1,8 @@
 
 import frogs from './frogs.js';
+import { findId, createDolareanout, calcLineItem } from '/src/commen/calculateLineItems.js';
+
+
 const list = document.getElementById('frogs');
 
 
@@ -69,6 +72,34 @@ function renderFrogs(frog){
     button.getAttribute('id', 'button-buy');
     button.textContent = 'Add';
     button.value = frog.id;
+    button.addEventListener('click', () => {
+        let json = localStorage.getItem('CART');
+        let cart;
+        if (json){
+            cart = JSON.parse(json);
+        } else {
+            cart = [];
+        }
+        
+        let lineItem = findId(cart, frog.id);
+        if (!lineItem) {
+            lineItem = {
+                id: frog.id,
+                quantity: 1
+            };
+
+            cart.push(lineItem);
+        }
+        else {
+            lineItem.quantity++;
+        }
+
+        json = JSON.stringify(cart);
+        localStorage.setItem('CART', json);
+
+        alert('1 ' + frog.name + ' added to cart');
+    });
+
 
     
     sectionElemen.appendChild(h4);

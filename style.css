@@ -1,12 +1,12 @@
 
-header {
-    display: flex;
-   align-items: inherit;
-}
+
 
 header h1 {
     font-size: 1.5em;
     border: 1px gray solid;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 200px;
 
 }
 
@@ -29,11 +29,10 @@ nav button:hover {
     
  nav ul {
     display: flex;
-    justify-content: inline;
 }
 
 nav li {
     display: block;
     width: 60px;
-    margin: 0px;
+    margin: 5px;
 }
