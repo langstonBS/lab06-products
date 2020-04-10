@@ -1,6 +1,6 @@
 
 import frogs from './frogs.js';
-import { findId, createDolareanout, calcLineItem } from '/src/commen/calculateLineItems.js';
+import { findId } from '/src/commen/calculateLineItems.js';
 
 
 const list = document.getElementById('frogs');
@@ -13,7 +13,6 @@ frogs.forEach(element => {
 
 
 function renderFrogs(frog){
-
     //create elemets 
     const li = document.createElement('li');
     const h1 = document.createElement('h1');
@@ -22,7 +21,6 @@ function renderFrogs(frog){
     const button = document.createElement('button');
     const p = document.createElement('p');
 
-    
     //divs
     const boxDiv = document.createElement('div');
     boxDiv.setAttribute('class', 'box-content');
@@ -43,8 +41,7 @@ function renderFrogs(frog){
 
     h1.textContent = frog.name;
     titleDiv.appendChild(h1);
-
-
+    
     img.src = frog.image;
     img.alt = frog.name + ' image';
     
@@ -73,10 +70,10 @@ function renderFrogs(frog){
     button.textContent = 'Add';
     button.value = frog.id;
     button.addEventListener('click', () => {
-        let json = localStorage.getItem('CART');
-        let cart;
-        if (json){
-            cart = JSON.parse(json);
+        let cart = localStorage.getItem('CART');
+    
+        if (cart){
+            cart = JSON.parse(cart);
         } else {
             cart = [];
         }
@@ -94,8 +91,8 @@ function renderFrogs(frog){
             lineItem.quantity++;
         }
 
-        json = JSON.stringify(cart);
-        localStorage.setItem('CART', json);
+        cart = JSON.stringify(cart);
+        localStorage.setItem('CART', cart);
 
         alert('1 ' + frog.name + ' added to cart');
     });

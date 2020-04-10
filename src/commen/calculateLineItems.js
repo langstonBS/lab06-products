@@ -5,8 +5,9 @@ export function findId(arryItem, id) {
         const item = arryItem[i];
         // check the id against item.id
         if (item.id === id) {
-            return item;
+            return arryItem[id];
         }
+        
     }
     return null;
 }

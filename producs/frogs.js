@@ -94,7 +94,8 @@ const frogs = [
     orge,
     rightTree,
     leftTree,
-    salmon
+    salmon,
+    red
 ];
 
 
