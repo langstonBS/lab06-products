@@ -1,8 +1,7 @@
-//import cart from '../checkout.js';
+//gets cart from local strage and then displays cart.
 import frogs from '/producs/frogs.js';
-import { findId, createDolareanout, calcLineItem } from '/src/commen/calculateLineItems.js';
+import { findId, createDolareanout } from '/src/commen/calculateLineItems.js';
 import { tableRow, totalCost } from '/checkout/renderTable.js';
-//import { findId } from '/src/commen/calculateLineItems.js';
 const tbody = document.querySelector('tbody');
 const buyButten = document.getElementById('order');
 const total = document.getElementById('order-total');
@@ -19,6 +18,7 @@ else {
     cart = [];
 }
 
+//calls dispays cart
 for (let i = 0; i < cart.length; i++) {
     let cartItem = cart[i].id;
     const frog = findId(frogs, cartItem);
@@ -33,7 +33,6 @@ for (let i = 0; i < cart.length; i++) {
     const frog = findId(frogs, cartItem);
     cartItem = [cart[i].id, cart[i].quantity];
     cost = cost + totalCost(cart, frog, i);
-    console.log(cost);
 }
 total.textContent = createDolareanout(cost);
 
