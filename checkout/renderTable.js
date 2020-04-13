@@ -1,84 +1,40 @@
 
-
-//import cart from '../checkout.js';
-import frogs from '/producs/frogs.js';
-//import { findId } from '/src/commen/calculateLineItems.js';
-const butonOrder = document.getElementById('order');
+export function tableRow(cartItem, frog, iterator) {
+    const tr = document.createElement('tr');
 
 
-let cart = localStorage.getItem('CART');
-let myitem = [];
+    const nameTd = document.createElement('td');
+    nameTd.textContent = frog.name;
+    nameTd.classList.add('align-left');
 
+    const quantityTd = document.createElement('td');
+    quantityTd.textContent = cartItem[iterator].quantity;
 
-butonOrder.addEventListener('click', () => {
-    localStorage.removeItem('CART');
-    alert('Order placed:\n' + JSON.stringify(cart, true, 2));
+    const priceTd = document.createElement('td');
+    priceTd.textContent = readablePrice(frog.price);
 
-});
+    const totalTd = document.createElement('td');
+    const totalPrice = (frog.price * cartItem[iterator].quantity);
+    totalTd.textContent = readablePrice(totalPrice);
+    totalTd.classList.add('line-item-total');
 
-function createTableHead(table, data){
-    let tHead = table.createTHead();
-    let row = tHead.insertRow();
-    for (let key of data)
-    {
-        let thData = document.createElement('th');
-        let text = document.createTextNode(key);
-        thData.appendChild(text);
-        row.appendChild(thData);
-    }
+    tr.appendChild(nameTd);
+    tr.appendChild(quantityTd);
+    tr.appendChild(priceTd);
+    tr.appendChild(totalTd);
+
+    return tr;
 }
 
-function createTableRrow(table, arayInput){
-    for (let i = 0; i < arayInput.length; i++){
-        let row = table.insertRow();
-        for (let x = 0; i < arayInput[x].length; i++){// set to vaule find by id and
-            let cell = row.insertCell();
-            let text = document.createTextNode(arayInput[x]);
-            cell.appendChild(text);
-        
-        }
-    }
+export function totalCost(cartItem, frog, iterator){
+    let totalPrice = (frog.price * cartItem[iterator].quantity);
+    return totalPrice;
+
 }
 
-function getItemInToCart(){
 
-    if (cart) 
-    {
-        cart = JSON.parse(cart);
-    } else {
-        cart = [];
-    }
-    myitem[0] = frogs[0];
+function readablePrice(price) {
+    const readablePrice = `$${Number(price).toFixed(2)}`;
     
-    for (let i = 0; i < cart.length ;i++){
-        const itemBuy = cart[i].id;
-        myitem = findById(frogs, itemBuy);  
-    }
-
+    return readablePrice;
 }
-
-function findById(items, id) {
-    // loop the array
-
-    for (let i = 0; i < items.length; i++) {
-        const item = items[i];
-        // check the id against item.id
-        if (item.id === id) {
-            return item;
-        }
-    }
-    
-
-    // loop done, nothing found
-    return null;
-}
-
-
-getItemInToCart();
-
-let theTable = document.querySelector('table');
-let data = Object.keys(myitem);
-createTableRrow(theTable, myitem);
-createTableHead(theTable, data);
-
-
