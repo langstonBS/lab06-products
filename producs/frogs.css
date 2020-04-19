@@ -1,0 +1,167 @@
+header {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: greenyellow;
+    height: 90px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    border: 3px grey solid;
+    text-align: center;
+    text-justify: auto;
+
+}
+
+nav button {
+    text-align: center;
+    font-size: 1em;
+    padding: 5px 10px 5px 10px;
+    font-weight: bolder;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.4s;
+    background-color: green;
+    
+}
+nav button:hover {
+    background-color: red;
+    color: lightgreen;
+  }   
+ nav ul {
+    display: flex;
+    justify-content: inline;
+}
+
+nav li {
+    display: block;
+    width: 60px;
+    margin: 0px;
+}
+
+main li {
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-wrap: inherit;
+    justify-content: right;
+    background-color: rgba(250, 249, 249, 0.222);
+}
+
+main ul {
+    display: flex;
+    justify-content: right;
+    list-style: none;
+    flex-wrap:wrap;
+}
+
+
+.box{
+    position: relative;
+    display: inline-block; 
+}
+
+.box-content{
+    position: relative;
+    display: inline-block;
+    border-top-left-radius: 20px;
+    
+}
+
+body h1{
+    font-size: 1.5em;
+    padding: 4px;
+    background-color: rgba(250, 249, 249, 0.222);
+    border-radius: 20px;
+}
+
+li {
+    width: auto;
+    padding-left: 10px;
+}
+div {
+    display: flex;
+    justify-items: baseline;
+}
+
+
+.box .text {
+   
+    position: absolute;
+    margin: 0 10px;
+    text-align: right;
+    top: 0px;
+    width: 10%; /* Set the width of the positioned div */
+    border-radius: 10px;
+}
+
+img {
+    max-width: 400px;
+    max-height: 200px;
+    border-radius: 20px;
+    border: 5px  rgba(250, 249, 249, 0.222) solid;
+}
+
+article {
+    width: 200px;
+    height: 90px; 
+    position: relative;
+    bottom: 45px;
+    left: 10px;
+    background-color: rgba(215, 215, 215, 0.79);
+    border-radius: 20px;
+    overflow: hidden;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.4s;
+}
+
+article:hover{
+    border-radius: 20px;
+    overflow: visible;
+    background-color: rgba(215, 215, 215, 0.79);
+    width: 200px;
+    height: 210px; 
+    position: relative;
+    bottom: 50px;
+    left: 10px;
+}
+
+
+
+P {
+    width: inherit;
+    height: inherit;
+    padding: 10px;
+    position: relative;
+    bottom: 10px;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition-duration: 0.1s;
+
+    overflow: scroll;   
+}
+
+p:hover {
+    width: inherit;
+    height: inherit;
+    padding: 5px;
+    position: relative;
+    top: 20px;
+}
+
+section{
+    display: flex;
+    justify-items: stretch;
+    align-items: baseline;
+    position: relative;
+    bottom: 40px;
+    left: 10px;
+}
+
+h4{
+    font-size: 1em;
+    margin: 5px;
+}
+
+#button-buy {
+    height: 20px;
+    border-radius: 20px;
+}
